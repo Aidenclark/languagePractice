@@ -4,5 +4,4 @@ Based off of [Top Interview Questions](https://leetcode.com/problem-list/top-int
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|1|[Two Sum]([https://leetcode.com/problems/largest-number-after-mutating-substring/](https://leetcode.com/problems/two-sum/)) | [C++](./languagePractice/python
-/twoSum.py), [Java](./algorithms/java/src/LargestNumberAfterMutatingSubtring/largestNumberAfterMutatingSubstring.java)|Easy|
+|1|[Two Sum]([https://leetcode.com/problems/largest-number-after-mutating-substring/](https://leetcode.com/problems/two-sum/)) | [Python](./languagePractuce/python/twoSum.py)|Easy|
