@@ -5,7 +5,7 @@ class Solution(object):
 
         for i, num in enumerate(nums): # enumerate over list, tracking (i) & (num)
                                                                                                                                            
-            complement = target - num # complement = number of something
+            complement = target - num # complementing number to complete the expression
 
             if complement in number_dictionary: # if the complement number exsits in the dictionary
                 return [number_dictionary[complement], i] # then return the indicies as a list 
