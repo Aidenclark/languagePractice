@@ -37,16 +37,16 @@ C# supports both static and dynamic typing with the var keyword.
 
 # Iteration 1:
 
-i = 0, num = 2
-complement = 9 - 2 = 7
-Since the number_dictionary is empty, the condition complement in number_dictionary is False.
+i = 0, num = 2\
+complement = 9 - 2 = 7\
+Since the number_dictionary is empty, the condition complement in number_dictionary is False.\
 The number_dictionary is updated: {2: 0}.
 
 # Iteration 2:
 
-i = 1, num = 7
-complement = 9 - 7 = 2
-The complement value exists as a key in the number_dictionary (2: 0).
-The condition complement in number_dictionary is True, so the code inside the if statement is executed.
+i = 1, num = 7\
+complement = 9 - 7 = 2\
+The complement value exists as a key in the number_dictionary (2: 0).\
+The condition complement in number_dictionary is True, so the code inside the if statement is executed.\
 The function returns [number_dictionary[complement], i] = [0, 1].
 
