@@ -9,6 +9,8 @@ class Solution(object):
             if complement in number_dictionary: # if the complement number exsits in the dictionary
                 return [number_dictionary[complement], i] # then return the indicies as a list 
             number_dictionary[num] = i # store current num as a key that acts as an index in the dictionary
+            
+            # [number_dictionary[complement_2], i] = [0, 1].
 
 nums = [2, 7, 11, 15]
 target = 9
