@@ -35,81 +35,18 @@ C# supports both static and dynamic typing with the var keyword.
 
 
 
-# Initialization:
+# Iteration 1:
 
-We start by defining a class named Solution that contains a method called twoSum.
-The twoSum method takes two parameters: nums (a list of numbers) and target (the target sum).
-Inside the method, we create an empty dictionary called number_dictionary to store numbers and their indices.
-Iteration:
+i = 0, num = 2
+complement = 9 - 2 = 7
+Since the number_dictionary is empty, the condition complement in number_dictionary is False.
+The number_dictionary is updated: {2: 0}.
 
-We use a for loop to iterate over the nums list, tracking both the index (i) and the number (num) at each iteration.
-Visual representation:
+# Iteration 2:
 
-
-nums = [2, 7, 11, 15]
-
-
-i=0, num=2\
-i=1, num=7\
-i=2, num=11\
-i=3, num=15
-
-# Complement Calculation:
-
-For each number (num) in the iteration, we calculate its complement by subtracting it from the target sum.
-Visual representation:
-
-
-target = 9
-
-
-complement = target - num
-
-
-complement_1 = 9 - 2 = 7\
-complement_2 = 9 - 7 = 2\
-complement_3 = 9 - 11 = -2\
-complement_4 = 9 - 15 = -6
-
-# Checking Complement Existence:
-
-We check if the current complement exists as a key in the number_dictionary dictionary.
-If the complement exists, it means we have found a pair of numbers that sum up to the target.
-In that case, we return a list containing the indices of the complement and the current number.
-Visual representation:
-
-
-number_dictionary = {}
-
-At the first iteration (complement = 7):
-complement_1 = 7
-
-Since complement_1 is not in the dictionary, we move to the next iteration.
-At the second iteration (complement = 2):
-
-
-complement_2 = 2
-Since complement_2 is in the dictionary (key), we return the indices as a list: 
-[number_dictionary[complement_2], i] = [0, 1].
-
-The value 0 corresponds to the index of the number 2, and 1 corresponds to the index of the number 7.
-We have found the solution, so we exit the loop and return the indices.
-
-# Storing Numbers in Dictionary:
-
-If the complement does not exist in the dictionary, we store the current number (num) as a key and its index (i) as the value in the dictionary.
-This allows us to keep track of the numbers we have encountered so far and their corresponding indices.
-Visual representation:
-
-
-number_dictionary = {\
-    2: 0,\
-    7: 1\
-}
-
-# Return the Result:
-
-After the loop ends, if we have not found a solution, we reach the end of the method.
-At this point, we can assume that no two numbers in the nums list add up to the target sum.
-Thus, we can handle this case based on the specific requirements of the problem (e.g., returning None or an empty list).
+i = 1, num = 7
+complement = 9 - 7 = 2
+The complement value exists as a key in the number_dictionary (2: 0).
+The condition complement in number_dictionary is True, so the code inside the if statement is executed.
+The function returns [number_dictionary[complement], i] = [0, 1].
 
