@@ -4,7 +4,8 @@ class Solution(object):
                                # Indicies (an alphabetical list of names, subjects, etc., with references to the places where they occur,)
 
         for i, num in enumerate(nums): # enumerate over list, tracking (i) & (num)
-                                                                                                                                           
+            # the loop will assign the current index to the variable i and the current element to the variable num
+            # on each iteration, the code inside the loop is executed. In this case, the code is as follows:                                                                                                                               
             complement = target - num # complementing number to complete the expression
 
             if complement in number_dictionary: # if the complement number exsits in the dictionary
