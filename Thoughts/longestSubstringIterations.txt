@@ -33,3 +33,33 @@
    - `max_length` remains 4.
 
 7. ...
+
+
+
+---
+
+
+
+Let's consider an example with the input string "abcabcbb" and go through the iterations until a repeating character appears:
+
+Iteration 1: start = 0, end = 0, character at end index is 'a'. No repeating characters encountered yet.
+
+Iteration 2: start = 0, end = 1, character at end index is 'b'. No repeating characters encountered yet.
+
+Iteration 3: start = 0, end = 2, character at end index is 'c'. No repeating characters encountered yet.
+
+Iteration 4: start = 0, end = 3, character at end index is 'a'. A repeating character is encountered.
+
+The code will update the start index to the next index after the repeated character. In this case, start becomes char_dict['a'] + 1, which is 1.
+
+After updating the start index, the sliding window will now consider the substring "bca" for further processing.
+
+Iteration 5: start = 1, end = 4, character at end index is 'b'. No repeating characters encountered yet in the current sliding window.
+
+Iteration 6: start = 1, end = 5, character at end index is 'c'. No repeating characters encountered yet in the current sliding window.
+
+Iteration 7: start = 1, end = 6, character at end index is 'b'. A repeating character is encountered.
+
+The code will update the start index to the next index after the repeated character. In this case, start becomes char_dict['b'] + 1, which is 3.
+
+After updating the start index, the sliding window will now consider the substring "acb" for further processing.
