@@ -21,3 +21,39 @@ console.log(ch); // Output: e
 
 In both Java and JavaScript, you can access individual characters in a string using different methods. However, the syntax and method names differ between the two languages.
 */
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function(s) {
+    if (s === null || s.length < 2) {
+        return s;
+    }
+    
+    let start = 0;
+    let end = 0;
+    
+    for (let i = 0; i < s.length; i++) {
+        let len1 = expandAroundCenter(s, i, i);
+        let len2 = expandAroundCenter(s, i, i + 1);
+        let len = Math.max(len1, len2);
+        
+        // The Math.floor () function returns the largest integer less than or equal to a given number.
+        if (len > end - start) {
+            start = i - Math.floor((len - 1) / 2);
+            end = i + Math.floor(len / 2);
+        }
+    }
+    
+    return s.substring(start, end + 1);
+};
+
+var expandAroundCenter = function(s, left, right) {
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
+        left--;
+        right++;
+    }
+    
+    return right - left - 1;
+};
