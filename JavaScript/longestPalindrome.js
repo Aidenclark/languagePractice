@@ -20,6 +20,10 @@ console.log(ch); // Output: e
 ```
 
 In both Java and JavaScript, you can access individual characters in a string using different methods. However, the syntax and method names differ between the two languages.
+
+
+Also remeber that in javascript var can hold any type of value but string is not a keyword but is the name of a built in
+data type- specifically for textual data. 
 */
 
 /**
