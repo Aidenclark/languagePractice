@@ -1,4 +1,4 @@
-### LeetCode Algoritms in Multiple Languages
+### LeetCode Problems in Multiple Languages
 
 Based off of [Top Interview Questions](https://leetcode.com/problem-list/top-interview-questions/?page=1)
 
