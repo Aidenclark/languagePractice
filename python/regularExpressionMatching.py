@@ -123,3 +123,193 @@ To create pseudocode for the given code, we can follow these steps:
 6. Return the value of `dp[m][n]` as the result.
 
 '''
+
+
+
+Sure! Here is the detailed DP table after each iteration for the scenario where `s = 'aab'` and `p = 'c*a*b'`:
+
+Initial DP table:
+```
+dp = [[False, False, False, False, False, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 1 (i=0, j=0):
+```
+dp = [[True, False, False, False, False, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 2 (i=0, j=1):
+```
+dp = [[True, False, True, False, True, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 3 (i=0, j=2):
+```
+dp = [[True, False, True, False, True, False],
+      [False, False, True, True, False, False],
+      [False, False, False, False, False, False],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 4 (i=0, j=3):
+```
+dp = [[True, False, True, False, True, False],
+      [False, False, True, True, False, False],
+      [False, False, False, True, False, False],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 5 (i=0, j=4):
+```
+dp = [[True, False, True, False, True, False],
+      [False, False, True, True, False, False],
+      [False, False, False, True, True, False],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 6 (i=0, j=5):
+```
+dp = [[True, False, True, False, True, False],
+      [False, False, True, True, False, False],
+      [False, False, False, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 7 (i=1, j=1):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, False, False],
+      [False, False, False, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 8 (i=1, j=2):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, False, False],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 9 (i=1, j=3):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, False, False],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 10 (i=1, j=4):
+
+
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, False],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 11 (i=1, j=5):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 12 (i=2, j=1):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 13 (i=2, j=2):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 14 (i=2, j=3):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 15 (i=2, j=4):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 16 (i=2, j=5):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 17 (i=3, j=1):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 18 (i=3, j=2):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 19 (i=3, j=3):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 20 (i=3, j=4):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, False]]
+```
+
+Iteration 21 (i=3, j=5):
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, True]]
+```
+
+Final DP table:
+```
+dp = [[True, False, True, False, True, False],
+      [False, True, True, True, True, True],
+      [False, False, True, True, True, True],
+      [False, False, False, False, False, True]]
+```
