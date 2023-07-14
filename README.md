@@ -12,3 +12,4 @@ Based off of [Top Interview Questions](https://leetcode.com/problem-list/top-int
 |10|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/description/) | [Python](./python/regularExpressionMatching.py), [JavaScript](./JavaScript/regularExpressionMatching.js), [C#](./C%23/regularExpressionMatching.cs)|Hard|
 |11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/) | [Python](./python/containterWithMostWater.py), [JavaScript](./JavaScript/containerWithMostWater.js), [C#](./C%23/containerWithMostWater.cs)|Medium|
 |11|[3sum](https://leetcode.com/problems/3sum/description/) | [Python](./python/3sum.py)|Medium|
+|011|[3sum](https://leetcode.com/problems/symmetric-tree/description/) | [Python](./python/3sum.py)|Easy|
