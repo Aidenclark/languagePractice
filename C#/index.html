@@ -1,0 +1,103 @@
+<table class = "standard-table" id="tableID"
+  <thead>
+    <tr>
+      <th>
+        Ttile
+        <div class="tooltipHelp" tabindex="1">
+          <span class="circle-white">?</span>
+          <span class="tooltiptextHelp onright">@Model.TooltipColumnTitle</span>
+        </div>
+      </th>
+      <th>
+        Text
+        <div class="tooltipHelp" tabindex="1">
+          <span class="circle-white">?</span>
+          <span class="tooltiptextHelp onright">@Model.TooltipColumnText</span>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    @if (Model.NewItems.Count == 0) {
+      <tr>
+        <td colspan="8">No news</td>
+      </tr>
+    }
+    @foreach (var newsItem in Model.NewsItems)
+    {
+      var trClass = "";
+      if (TempData["toHighlight"] != null && TempData["toHighlight"].ToString() == newsItem.NewsId.ToString())
+      {
+      trClass ="blink"
+      }
+  
+      <tr class="@trClass">
+        <td>
+          <a href="@Url.Action("Edit", new { id = newsItem.NewsId})" class="action-link">
+            <span class ="oi" data-glyph="trash" title="delete" araia-hidden="true"></span>
+          </a>
+        </td>
+        <td>
+          @newsItem.PostDate.ToShortDataString()</td>
+          @if (newsItem.ExpirationData.HasValue)
+          {
+            <td>@newsItem.ExpirationData.Value.ToShortDateString()</td>
+          }
+          else
+          {
+            <td>NA</td>
+          }
+          <td>@(newsItem.IncludeInEmail ? "Yes" : "No")</td>
+          <td>@(newsItem.IsHeadline ? "Yes" : "No")</td>
+          <td>@newsItem.Title</td>
+          <td>@Html.Raw(newsItem.Text)</td>
+          <td>@(newsItem.Active ? "Yes" : "No")</td>
+          <td>@newsItem.LastUpdatedBy</td>
+      </tr>
+  </tbody>
+</table>
+
+@section scipts 
+{
+  <script>
+    function searchTable() {
+      var input = document.getElementById("searchInput").value.toLowerCase();
+      var table = document.getElementById("tableID");
+      var rows = table.getElementsByTagName("tr");
+  
+      for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName("td");
+        
+        if (cells.length >= 7) {
+          var titleCell = cells[5]; // 6th column
+          var textCell = cells[6]; // 7th column
+  
+          var title = titleCell.textContent || titleCell.innerText;
+          var text = textCell.textContent || textCell.innerText;
+  
+          if (title.toLowerCase().indexOf(input) > -1 || text.toLowerCase().indexOf(input) > -1) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+  
+  @Scripts.Render("Scripts/NewsEdit.js")
+  
+  @if (!ViewData.ModelState.IsValid)
+  {
+       <script>
+            NewsEdit.toggleNewsForm();
+       </script>
+  }
+}
+
+
+
+
+
+
