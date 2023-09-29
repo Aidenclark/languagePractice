@@ -9,13 +9,13 @@ class Solution(object):
             result.append(list(current))
             # iterate over nums to generate all possible subsets
             for i in range(start, len(nums)):
-                # skip duplicates
+                # 1. skip duplicates
                 if i > start and nums[i] == nums[i-1]:
                     continue
-                # include nums[i] in current subset and move forward
+                # 2. include nums[i] in current subset and move forward
                 current.append(nums[i])
                 backtrack(i+1, current)
-                # exclude nums[i] from current subset (backtrack)
+                # 3. exclude nums[i] from current subset (backtrack)
                 current.pop()
         
         result = []
