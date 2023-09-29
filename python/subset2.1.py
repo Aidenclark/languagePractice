@@ -1,9 +1,6 @@
 class Solution(object):
     def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+
         def backtrack(start, current):
             # add current subset to the final result
             result.append(list(current))
